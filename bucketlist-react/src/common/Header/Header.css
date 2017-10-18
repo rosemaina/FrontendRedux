@@ -1,0 +1,46 @@
+/* 
+==========================
+Color scheme for now:
+
+main- color: #F34213 
+secondary-color: #3E2F5B
+tertiary-color: #E0CA3C
+sec-color-2: #136F63
+tert-color-2: #000F08
+==========================
+*/
+
+
+
+.header-container{
+    margin: 0 auto;
+    background: #F34213;
+    padding: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3e2f5b;
+    text-align: center;
+    font-weight: 500;
+}
+
+p{
+    color: #3e2f5b;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: flash-paragraph 3s infinite;
+}
+
+@keyframes flash-paragraph {
+    0%{
+        color: #3E2F5B;
+    }
+
+    50%{
+        color: #F34213;
+        transform: scale(1.2);
+
+    }
+
+    100%{
+        color: #3E2F5B
+    }
+}
