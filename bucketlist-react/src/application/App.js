@@ -6,6 +6,8 @@ class App extends Component {
     return (
       <div className="App">
           <Common.Components.Header/>
+          <Common.Components.Footer/>
+          <Common.Components.Navigation/>
       </div>
     );
   }
