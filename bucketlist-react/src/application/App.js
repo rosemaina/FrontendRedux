@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as Common from '../common';
-import * as Forms from './components';
+import * as Auth from '../Auth';
 
 class App extends Component {
   render() {
@@ -8,8 +8,8 @@ class App extends Component {
       <div className="App">
           <Common.Components.Header/>
           <Common.Components.Footer/>
-          <Common.Components.Navigation/>
-          <Forms.Components.RegisterForm/>
+          <Auth.components.RegisterContainer/>
+          {/* <Forms.Components.RegisterForm/> */}
       </div>
     );
   }

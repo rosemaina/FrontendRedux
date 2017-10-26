@@ -1,21 +1,11 @@
-import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
+import React from 'react';
 import { Button, Form, FormGroup, Col, FormControl, Checkbox, ControlLabel } from 'react-bootstrap';
 
-
-export class RegisterForm extends Component{
-  constructor(props){
-    super(props);
-
-    this.state={
-      email: '',
-      password: '',
-      confirm_password: '',
-      registration_success: false
-    }}
-
-    render(){
-      return(
+/**
+ * Expect a prop here.
+ */
+export const RegisterForm = () => {
+    return(
         <Form horizontal>
         <FormGroup controlId="formHorizontalEmail">
           <Col componentClass={ControlLabel} sm={2}>
@@ -60,7 +50,4 @@ export class RegisterForm extends Component{
       </Form>
     
       );
-    }
 }
-
-
