@@ -4,42 +4,36 @@ import { Button, Form, FormGroup, Col, FormControl, Checkbox, ControlLabel } fro
 /**
  * Expect a prop here.
  */
-export const RegisterForm = () => {
+export const RegisterForm = ({email, password, confirm_password, onSubmit, onChange}) => {
     return(
-        <Form horizontal>
-        <FormGroup controlId="formHorizontalEmail">
+        <Form horizontal onSubmit={onSubmit}>
+        <FormGroup onChange={onChange} controlId="formHorizontalEmail">
           <Col componentClass={ControlLabel} sm={2}>
-            Email
+            {email}
           </Col>
-          <Col sm={10}>
-            <FormControl type="email" placeholder="example@email.com" />
+          <Col sm={7}>
+            <FormControl name="email" type="email" placeholder="example@email.com" />
           </Col>
         </FormGroup>
     
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup onChange={onChange} controlId="formHorizontalPassword">
           <Col componentClass={ControlLabel} sm={2}>
-            Password
+            {password}
           </Col>
-          <Col sm={10}>
-            <FormControl type="password" placeholder="Password" />
+          <Col sm={7}>
+            <FormControl name="password" type="password" placeholder="Password" />
           </Col>
         </FormGroup>
     
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup onChange={onChange} controlId="formHorizontalPassword">
           <Col componentClass={ControlLabel} sm={2}>
-            Confirm password
+            {confirm_password}
           </Col>
-          <Col sm={10}>
-            <FormControl type="password" placeholder="Password" />
-          </Col>
-        </FormGroup>
-    
-        <FormGroup>
-          <Col smOffset={2} sm={10}>
-            <Checkbox>Remember me</Checkbox>
+          <Col sm={7}>
+            <FormControl name="confirm_password" type="password" placeholder="Password" />
           </Col>
         </FormGroup>
-    
+
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button type="submit">
