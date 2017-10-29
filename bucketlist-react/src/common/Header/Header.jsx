@@ -6,7 +6,8 @@ export class HeaderContainer extends Component{
     render(){
         return(
             <div>
-                <NavigationContainer/>
+                                <NavigationContainer/>
+
             </div>
             /**
              * Add other components here like the navigation component.

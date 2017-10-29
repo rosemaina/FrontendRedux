@@ -12,6 +12,7 @@ export class NavigationContainer extends Component {
                     Login
                 </Button>
             </div>
+
         )
     }
 }

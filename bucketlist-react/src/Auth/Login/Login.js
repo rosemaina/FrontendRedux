@@ -24,10 +24,16 @@ export class LoginContainer extends Component{
           email: this.state.email,
           password: this.state.password
         })
-        .then(
-          resp => {localStorage.setItem('token', resp.data['token'])},
-          () => this.setState({login_success: true }))
-        .catch((error) => {console.log(error)})
+
+        .then(resp => {
+          localStorage.setItem('token', resp.data['token'])
+        })
+        .then(() => {
+          this.setState({login_success: true })
+        })
+        .catch((error) => {
+          console.log(error)
+        })
       }
 
     render(){
