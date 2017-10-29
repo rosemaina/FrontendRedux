@@ -1,5 +1,1 @@
-import App from './App';
-
-export const Components = {
-    App
-}
+export {App} from './App';
